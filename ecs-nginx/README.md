@@ -4,7 +4,7 @@ This will use Terraform to setup an NGINX demo application on AWS ECS using AWS 
 
 ## Pre-requisites
 ### Preparing AWS credential
-1. For simplicity and quick testing in an AWS environment, create a IAM user with CLI access and generate temporary AWS secret and access key, this is not recommended in production enviroment.
+1. For simplicity and quick testing in an AWS environment, create an IAM user with CLI access and generate temporary AWS secret and access key, this is not recommended in production enviroment.
 2. Export the AWS credentials as environment variables. Eg:
 ```
 export AWS_ACCESS_KEY_ID="AWSXXXXXX0978"
@@ -47,4 +47,4 @@ http://nginx-lb-1234567890.ap-southeast-1.elb.amazonaws.com/
 
 ### Clean up
 1. Destroy all the resources via `terraform destroy` command.
-2. Delete the s3 bucket, Dynamo DB table if no longer in use.
+2. Delete the s3 bucket, Dynamo DB table and IAM user if no longer in use.
