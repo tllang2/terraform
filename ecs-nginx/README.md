@@ -25,7 +25,7 @@ aws s3api create-bucket --bucket tllang-test --region ap-southeast-1 --create-bu
 ```
 3. Use [tfenv](https://github.com/tfutils/tfenv) to manage different Terraform version, the Terraform version is defined at `.terraform-version`
 
-### Setup and access the nginx demo app
+### Setup and access the NGINX demo application
 1. Redirect to `terraform/ecs-nginx` directory, perform the following Terraform commands, type in `yes` to confirm `terraform apply` to setup the NGINX application.
 ```
 terraform init
@@ -38,5 +38,5 @@ http://nginx-lb-1234567890.ap-southeast-1.elb.amazonaws.com/
 ```
 
 ### Clean up
-1. Destroy all the resources via `terraform destory` command
-2. Delete the s3 bucket, Dynamo DB table
+1. Destroy all the resources via `terraform destroy` command.
+2. Delete the s3 bucket, Dynamo DB table if no longer in use.
