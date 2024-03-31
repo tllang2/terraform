@@ -4,11 +4,19 @@ This will use Terraform to setup an NGINX demo application on AWS ECS using AWS 
 
 ## Pre-requisites
 ### Preparing AWS credential
-1. For simplicity and quick testing in an AWS environment, generate temporary AWS secret and access key, this is not recommended in production enviroment.
-2. Export the AWS credentials as environment variables.
+1. For simplicity and quick testing in an AWS environment, create a IAM user with CLI access and generate temporary AWS secret and access key, this is not recommended in production enviroment.
+2. Export the AWS credentials as environment variables. Eg:
 ```
 export AWS_ACCESS_KEY_ID="AWSXXXXXX0978"
 export AWS_SECRET_ACCESS_KEY="AULP0XXXXXXY7US9XXXXOP56JX"
+```
+3. For simplicity, the user should have the following permissions. In actual production environment, only allow least permissions to perform necessary operations depending on user role.
+```
+AmazonDynamoDBFullAccess
+AmazonS3FullAccess
+AmazonVPCFullAccess
+ElasticLoadBalancingFullAccess
+AmazonECS_FullAccess
 ```
 
 ### Setup Terraform backend
